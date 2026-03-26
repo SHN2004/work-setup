@@ -16,7 +16,7 @@ It currently tracks:
 - `vscode/extensions.txt`
 - `zsh/.zshrc`
 
-## Link Repo Files Into Your System
+## Install Repo Files Into Your System
 
 Clone the repository first:
 
@@ -28,13 +28,15 @@ cd work-setup
 Then run:
 
 ```bash
-./scripts/link-into-system.sh
+./scripts/install-into-system.sh
 ```
 
-The link script:
+The install script:
 
 - backs up existing target files with a timestamp
-- creates symlinks from your home directory into this repo
+- stores each backup snapshot in `~/.work-setup-backups/<date-time>/`
+- copies the repo files into your home directory and VS Code config folder
+- replaces existing symlinks with normal files, so the setup keeps working even if you move or remove this repo
 
 If needed, reload your shell:
 
@@ -54,6 +56,19 @@ This copies the current local files from:
 - `~/.zshrc`
 
 Use it after changing your editor or shell setup and before committing.
+Use `./scripts/install-into-system.sh` after pulling repo updates when you want to refresh the files installed on your machine.
+
+## Restore A Backup
+
+```bash
+./scripts/restore-backup.sh
+```
+
+The restore script:
+
+- lists the dated snapshots available in `~/.work-setup-backups/`
+- lets you choose which snapshot to restore interactively
+- backs up your current files into a new dated snapshot before restoring the selected backup
 
 ## Updating The Repo
 

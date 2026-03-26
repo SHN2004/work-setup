@@ -1,6 +1,7 @@
 bierner.markdown-mermaid
 esbenp.prettier-vscode
 fosshaas.fontsize-shortcuts
+github.copilot-chat
 jaakko.black
 ms-python.debugpy
 ms-python.python
