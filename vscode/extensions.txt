@@ -1,0 +1,10 @@
+bierner.markdown-mermaid
+esbenp.prettier-vscode
+fosshaas.fontsize-shortcuts
+jaakko.black
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-pylance
+ms-python.vscode-python-envs
+nur.just-black
+vscode-icons-team.vscode-icons
